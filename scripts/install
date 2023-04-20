@@ -38,8 +38,8 @@ popd
 
 mv $install_dir/web/dist $install_dir/server/dist
 
-pushd $install_dir/server/dist
-	ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=1 $ynh_go build -o $install_dir/memos ./main.go
+pushd $install_dir/server/dist/
+	ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=1 $ynh_go build -o $install_dir/
 popd
 
 ynh_remove_go
