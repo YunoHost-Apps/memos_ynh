@@ -18,7 +18,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 Lightweight, self-hosted memo hub
 
-**Version incluse :** 0.12.2~ynh1
+**Version incluse :** 0.12.1~ynh1
 
 **Démo :** https://demo.usememos.com
 
