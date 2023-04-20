@@ -3,11 +3,11 @@ packaging_format = 2
 id = "memos"
 name = "Memos"
 description.en = "Lightweight, self-hosted memo hub"
-description.fr = "Lightweight, self-hosted memo hub"
+description.fr = "Hub de mémo léger et auto-hébergé"
 
 version = "0.12.2~ynh1"
 
-maintainers = ["johndoe"]
+maintainers = ["eric_G"]
 
 [upstream]
 license = "MIT"

@@ -31,7 +31,7 @@ ynh_setup_source --dest_dir="$install_dir"
 
 chown -R $app:www-data "$install_dir"
 
-pushd $install_dir/web/
+pushd $install_dir/web
 	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH yarn
 	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH yarn build
 popd
