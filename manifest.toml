@@ -1,0 +1,62 @@
+packaging_format = 2
+
+id = "memos"
+name = "Memos"
+description.en = "Lightweight, self-hosted memo hub"
+description.fr = "Lightweight, self-hosted memo hub"
+
+version = "0.12.2~ynh1"
+
+maintainers = ["johndoe"]
+
+[upstream]
+license = "MIT"
+demo = "https://demo.usememos.com"
+website = "https://usememos.com/"
+admindoc = "https://usememos.com/docs"
+code = "https://github.com/usememos/memos"
+
+[integration]
+yunohost = ">= 11.1.17"
+architectures = "all"
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+        [resources.sources.main]
+        url = "https://github.com/usememos/memos/archive/refs/tags/v0.12.1.tar.gz"
+        sha256 = "d39d92d9ab9741dcc57a85a486f4145c3704cd1b1104b342de8292ac796ad4c1"
+        autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+
+    [resources.apt]
+    packages = "sqlite3"
+
+    extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
+    extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
+    extras.yarn.packages = "yarn"

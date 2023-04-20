@@ -1,0 +1,13 @@
+[Unit]
+Description=Memos
+After=network.target
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+WorkingDirectory=__INSTALL_DIR__/
+ExecStart=__INSTALL_DIR__/memos --mode=prod --port=__PORT__ --data=__DATA_DIR__
+
+[Install]
+WantedBy=multi-user.target
