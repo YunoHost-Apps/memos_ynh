@@ -41,6 +41,7 @@ ram.runtime = "50M"
         [resources.sources.main]
         url = "https://github.com/k0baya/memos-binary/releases/download/v0.20.1/memos-linux-amd64.tar.gz"
         sha256 = "1b7e07f104a5f72703653d3c67678d65e68bd62e79d777a342fa2bdad912bc46"
+        in_subdir = false
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
