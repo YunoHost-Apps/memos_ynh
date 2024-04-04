@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/memos --mode=prod --port=__PORT__ --data=__DATA_DIR__ --driver=postgres --dsn=postgresql://__DB_NAME__:__DB_PWD__@localhost:5432/__DB_NAME__
+ExecStart=__INSTALL_DIR__/memos --mode=prod --port=__PORT__ --data=__DATA_DIR__ --driver=postgres --dsn=postgresql://__DB_USER__:__DB_PWD__@localhost:5432/__DB_NAME__
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these
