@@ -5,7 +5,7 @@ name = "Memos"
 description.en = "Lightweight, self-hosted memo hub"
 description.fr = "Hub de mémo léger et auto-hébergé"
 
-version = "0.20.1~ynh1"
+version = "0.22.2~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -18,7 +18,7 @@ code = "https://github.com/usememos/memos"
 
 [integration]
 yunohost = ">= 11.2"
-architectures = "all"
+architectures = ["amd64", "arm64"]
 multi_instance = true
 
 ldap = false
@@ -42,8 +42,11 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://github.com/k0baya/memos-binary/releases/download/v0.20.1/memos-linux-amd64.tar.gz"
-        sha256 = "1b7e07f104a5f72703653d3c67678d65e68bd62e79d777a342fa2bdad912bc46"
+        amd64.url = "https://github.com/usememos/memos/releases/download/v0.22.2/memos_v0.22.2_linux_amd64.tar.gz"
+        amd64.sha256 = "e029a158bdcc20a959abd3ef6904166aed87be0afc1583677921fb39d7c38d79"
+        arm64.url = "https://github.com/usememos/memos/releases/download/v0.22.2/memos_v0.22.2_linux_arm64.tar.gz"
+        arm64.sha256 = "f707512298bf9457dfae6c2f2888b78ba74c740ae10f1cf67de05dbbb546588c"
+
         in_subdir = false
         autoupdate.strategy = "latest_github_tag"
 
