@@ -24,12 +24,12 @@ chmod +x "$install_dir/memos"
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding $app's configuration files..." --weight=1
+#ynh_script_progression --message="Adding $app's configuration files..." --weight=1
 
-ynh_add_config --template=".env" --destination="$install_dir/.env"
+#ynh_add_config --template=".env" --destination="$install_dir/.env"
 
-chmod 400 "$install_dir/.env"
-chown "$app:$app" "$install_dir/.env"
+#chmod 400 "$install_dir/.env"
+#chown "$app:$app" "$install_dir/.env"
 
 #=================================================
 # SYSTEM CONFIGURATION
