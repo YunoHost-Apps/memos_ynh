@@ -44,8 +44,6 @@ ram.runtime = "50M"
         [resources.sources.main]
         url = "https://github.com/usememos/memos/archive/refs/tags/v0.22.2.tar.gz"
         sha256 = "2417d8c9a538a4e6d70b36d6c94ce5b941f94da354f0f726533441b331beb1b6"
-
-        in_subdir = false
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
