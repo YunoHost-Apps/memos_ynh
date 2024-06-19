@@ -18,7 +18,7 @@ It shall NOT be edited by hand.
 
 Lightweight, self-hosted memo hub
 
-**Shipped version:** 0.20.1~ynh1
+**Shipped version:** 0.22.2~ynh1
 
 **Demo:** <https://demo.usememos.com>
 

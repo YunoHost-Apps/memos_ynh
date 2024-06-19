@@ -18,7 +18,7 @@ EZ editatu eskuz.
 
 Lightweight, self-hosted memo hub
 
-**Paketatutako bertsioa:** 0.20.1~ynh1
+**Paketatutako bertsioa:** 0.22.2~ynh1
 
 **Demoa:** <https://demo.usememos.com>
 
