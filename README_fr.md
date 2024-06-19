@@ -18,7 +18,7 @@ Il NE doit PAS être modifié à la main.
 
 Lightweight, self-hosted memo hub
 
-**Version incluse :** 0.20.1~ynh1
+**Version incluse :** 0.22.2~ynh1
 
 **Démo :** <https://demo.usememos.com>
 
