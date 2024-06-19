@@ -53,7 +53,7 @@ yunohost service add $app --description="Self-hosted memo hub" --log="/var/log/$
 #=================================================
 ynh_script_progression --message="Installing $app..." --weight=30
 
-pushd "$install_dir"
+pushd "$install_dir/build"
     ynh_use_nodejs
     env $ynh_node_load_PATH corepack enable
 	env $ynh_node_load_PATH COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack prepare --activate
