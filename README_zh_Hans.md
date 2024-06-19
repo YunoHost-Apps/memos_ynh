@@ -18,7 +18,7 @@
 
 Lightweight, self-hosted memo hub
 
-**分发版本：** 0.20.1~ynh1
+**分发版本：** 0.22.2~ynh1
 
 **演示：** <https://demo.usememos.com>
 
