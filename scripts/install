@@ -65,8 +65,6 @@ ynh_secure_remove --file="$install_dir/.go-version"
 chmod +x "$install_dir/memos"
 
 #=================================================
-# GENERIC FINALIZATION
-#=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
