@@ -34,8 +34,8 @@ yunohost service add $app --description="Self-hosted memo hub" --log="/var/log/$
 ynh_script_progression "Installing $app..."
 
 pushd "$install_dir/web"
-    ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
- 	ynh_hide_warnings ynh_exec_as_app pnpm build
+    #ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+ 	ynh_hide_warnings ynh_exec_as_app npm build
 popd
 
 cp $install_dir/web/dist $install_dir/server/router/frontend/dist
