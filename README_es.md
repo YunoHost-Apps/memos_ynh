@@ -5,7 +5,7 @@ No se debe editar a mano.
 
 # Memos para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/memos.svg)](https://dash.yunohost.org/appci/app/memos) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/memos.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/memos.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/memos.svg)](https://ci-apps.yunohost.org/ci/apps/memos/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/memos.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/memos.maintain.svg)
 
 [![Instalar Memos con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=memos)
 
@@ -18,7 +18,7 @@ No se debe editar a mano.
 
 Lightweight, self-hosted memo hub
 
-**Versión actual:** 0.22.2~ynh1
+**Versión actual:** 0.22.5~ynh1
 
 **Demo:** <https://demo.usememos.com>
 
@@ -36,7 +36,7 @@ Lightweight, self-hosted memo hub
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/memos_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/memos_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
