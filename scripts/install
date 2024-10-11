@@ -6,7 +6,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Installing nodejs..." --weight=50
+ynh_script_progression "Installing nodejs..."
 
 ynh_nodejs_install
 
@@ -31,7 +31,7 @@ yunohost service add $app --description="Self-hosted memo hub" --log="/var/log/$
 #=================================================
 # INSTALL MEMOS
 #=================================================
-ynh_script_progression --message="Installing $app..." --weight=30
+ynh_script_progression "Installing $app..."
 
 pushd "$install_dir/web"
     ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
@@ -43,19 +43,18 @@ cp $install_dir/web/dist $install_dir/server/router/frontend/dist
 #=================================================
 # BUILD APP
 #=================================================
-ynh_script_progression --message="Building app..." --weight=1
+ynh_script_progression "Building app..."
 
 ynh_go_install
 
 pushd $install_dir/bin/memos/main.go
-	ynh_exec_warn_less ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/memos
+	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/memos
 popd
 
 ynh_remove_go
-#ynh_secure_remove --file="$install_dir/build/"
-#ynh_secure_remove --file="$install_dir/.cache/"
-#ynh_secure_remove --file="$install_dir/go/"
-#ynh_secure_remove --file="$install_dir/.go-version"
+#ynh_safe_rm --file="$install_dir/.cache/"
+#ynh_safe_rm --file="$install_dir/go/"
+#ynh_safe_rm --file="$install_dir/.go-version"
 
 chmod +x "$install_dir/memos"
 
