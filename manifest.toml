@@ -65,4 +65,7 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = "sqlite3"
+    packages = "postgresql, postgresql-contrib"
+
+    [resources.database]
+    type = "postgresql"
