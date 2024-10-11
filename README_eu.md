@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Memos YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/memos.svg)](https://dash.yunohost.org/appci/app/memos) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/memos.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/memos.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/memos.svg)](https://ci-apps.yunohost.org/ci/apps/memos/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/memos.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/memos.maintain.svg)
 
 [![Instalatu Memos YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=memos)
 
@@ -18,7 +18,7 @@ EZ editatu eskuz.
 
 Lightweight, self-hosted memo hub
 
-**Paketatutako bertsioa:** 0.22.2~ynh1
+**Paketatutako bertsioa:** 0.22.5~ynh1
 
 **Demoa:** <https://demo.usememos.com>
 

@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
@@ -17,39 +11,27 @@ ynh_script_progression --message="Installing nodejs..." --weight=50
 ynh_install_nodejs --nodejs_version=$nodejs_version
 
 #=================================================
-# APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..." --weight=1
+ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir/build"
 
-chown -R $app:www-data "$install_dir"
-
-#=================================================
-# APP INITIAL CONFIGURATION
-#=================================================
-ynh_script_progression --message="Adding $app's configuration files..." --weight=1
-
-ynh_add_config --template=".env" --destination="$install_dir/.env"
-
-chmod 400 "$install_dir/.env"
-chown "$app:$app" "$install_dir/.env"
+chmod +x "$install_dir/memos"
 
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
+ynh_script_progression "Adding system configurations related to $app..."
 
-ynh_add_nginx_config
+ynh_config_add_nginx
 
-ynh_add_systemd_config
+ynh_config_add_systemd
 
 yunohost service add $app --description="Self-hosted memo hub" --log="/var/log/$app/$app.log"
 
 #=================================================
-# INSTALL ETHERPAD
+# INSTALL MEMOS
 #=================================================
 ynh_script_progression --message="Installing $app..." --weight=30
 
@@ -62,8 +44,6 @@ pushd "$install_dir/build"
  	#ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH pnpm i --frozen-lockfile
 popd
 
-#=================================================
-# SPECIFIC SETUP
 #=================================================
 # BUILD APP
 #=================================================
@@ -89,12 +69,11 @@ chmod +x "$install_dir/memos"
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Starting a systemd service..." --weight=1
+ynh_script_progression "Starting $app's systemd service..."
 
-# Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemctl --service=$app --action="start"
 
 #=================================================
 # END OF SCRIPT
 #=================================================
-ynh_script_progression --message="Installation of $app completed" --last
+ynh_script_progression "Installation of $app completed"
