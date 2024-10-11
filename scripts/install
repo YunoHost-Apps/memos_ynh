@@ -17,8 +17,6 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir/build"
 
-chmod +x "$install_dir/memos"
-
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
