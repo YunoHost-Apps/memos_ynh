@@ -35,7 +35,7 @@ ynh_script_progression "Installing $app..."
 
 pushd "$install_dir/web"
     ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
- 	ynh_exec_warn_less ynh_exec_as_app pnpm build
+ 	ynh_hide_warnings ynh_exec_as_app pnpm build
 popd
 
 cp $install_dir/web/dist $install_dir/server/router/frontend/dist
