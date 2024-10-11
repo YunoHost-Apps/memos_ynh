@@ -4,13 +4,18 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# INSTALL DEPENDENCIES
+#=================================================
+ynh_script_progression "Installing nodejs..."
+
+ynh_nodejs_install
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
-
-chmod +x "$install_dir/memos"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -24,11 +29,35 @@ ynh_config_add_systemd
 yunohost service add $app --description="Self-hosted memo hub" --log="/var/log/$app/$app.log"
 
 #=================================================
-# APP INITIAL CONFIGURATION
+# INSTALL MEMOS
 #=================================================
-#ynh_script_progression "Adding $app's configuration files..."
+ynh_script_progression "Installing $app..."
 
-#ynh_config_add --template=".env" --destination="$install_dir/.env"
+pushd "$install_dir/web"
+    #ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+    corepack enable && pnpm i --frozen-lockfile
+ 	ynh_exec_as_app pnpm build
+popd
+
+cp $install_dir/web/dist $install_dir/server/router/frontend/dist
+
+#=================================================
+# BUILD APP
+#=================================================
+ynh_script_progression "Building app..."
+
+ynh_go_install
+
+pushd $install_dir/bin/memos/main.go
+	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/memos
+popd
+
+ynh_remove_go
+#ynh_safe_rm --file="$install_dir/.cache/"
+#ynh_safe_rm --file="$install_dir/go/"
+#ynh_safe_rm --file="$install_dir/.go-version"
+
+chmod +x "$install_dir/memos"
 
 #=================================================
 # START SYSTEMD SERVICE
