@@ -33,13 +33,23 @@ yunohost service add $app --description="Self-hosted memo hub" --log="/var/log/$
 #=================================================
 ynh_script_progression "Installing $app..."
 
+
+cd web 
+yarn
+yarn build
+# move the web/dist to server/dist
+cd .. 
+mv web/dist  server/dist
+go build -o memos ./main.go
+./memos --mode=prod --port=5230 --data=/your-data-path
+
+
 pushd "$install_dir/web"
-    #ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
-    corepack enable && pnpm i --frozen-lockfile
- 	ynh_exec_as_app pnpm build
+ 	ynh_hide_warningsynh_exec_as_app yarn
+    ynh_hide_warningsynh_exec_as_app yarn build
 popd
 
-cp $install_dir/web/dist $install_dir/server/router/frontend/dist
+cp $install_dir/web/dist $install_dir/server/dist
 
 #=================================================
 # BUILD APP
@@ -48,8 +58,9 @@ ynh_script_progression "Building app..."
 
 ynh_go_install
 
-pushd $install_dir/bin/memos/main.go
-	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/memos
+pushd $install_dir/
+    go build -o memos ./main.go
+	#ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/memos
 popd
 
 ynh_remove_go
