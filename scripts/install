@@ -33,17 +33,6 @@ yunohost service add $app --description="Self-hosted memo hub" --log="/var/log/$
 #=================================================
 ynh_script_progression "Installing $app..."
 
-
-cd web 
-yarn
-yarn build
-# move the web/dist to server/dist
-cd .. 
-mv web/dist  server/dist
-go build -o memos ./main.go
-./memos --mode=prod --port=5230 --data=/your-data-path
-
-
 pushd "$install_dir/web"
  	ynh_hide_warningsynh_exec_as_app yarn
     ynh_hide_warningsynh_exec_as_app yarn build
