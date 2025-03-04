@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/memos --mode=prod --addr 127.0.0.1 --port=__PORT__ --data=__DATA_DIR__ --driver=sqlite
+ExecStart=__INSTALL_DIR__/memos --mode=prod --addr 127.0.0.1 --port=__PORT__ --data=__DATA_DIR__ --driver=postgres
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these

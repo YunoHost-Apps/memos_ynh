@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # Memos para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/memos.svg)](https://ci-apps.yunohost.org/ci/apps/memos/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/memos.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/memos.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/memos)](https://ci-apps.yunohost.org/ci/apps/memos/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/memos)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/memos)
 
 [![Instalar Memos con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=memos)
 
@@ -18,7 +20,7 @@ NON debe editarse manualmente.
 
 Lightweight, self-hosted memo hub
 
-**Versión proporcionada:** 0.22.5~ynh1
+**Versión proporcionada:** 0.24.0~ynh1
 
 **Demo:** <https://demo.usememos.com>
 
