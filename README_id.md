@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Memos untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/memos.svg)](https://ci-apps.yunohost.org/ci/apps/memos/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/memos.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/memos.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/memos)](https://ci-apps.yunohost.org/ci/apps/memos/)
+![Status kerja](https://apps.yunohost.org/badge/state/memos)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/memos)
 
 [![Pasang Memos dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=memos)
 
@@ -18,7 +20,7 @@ Ini TIDAK boleh diedit dengan tangan.
 
 Lightweight, self-hosted memo hub
 
-**Versi terkirim:** 0.22.5~ynh1
+**Versi terkirim:** 0.24.0~ynh1
 
 **Demo:** <https://demo.usememos.com>
 

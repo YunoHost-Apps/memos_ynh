@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Memos
 
-[![集成程度](https://dash.yunohost.org/integration/memos.svg)](https://ci-apps.yunohost.org/ci/apps/memos/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/memos.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/memos.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/memos)](https://ci-apps.yunohost.org/ci/apps/memos/)
+![工作状态](https://apps.yunohost.org/badge/state/memos)
+![维护状态](https://apps.yunohost.org/badge/maintained/memos)
 
 [![使用 YunoHost 安装 Memos](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=memos)
 
@@ -18,7 +20,7 @@
 
 Lightweight, self-hosted memo hub
 
-**分发版本：** 0.22.5~ynh1
+**分发版本：** 0.24.0~ynh1
 
 **演示：** <https://demo.usememos.com>
 
