@@ -1,1 +1,1 @@
-Lightweight, self-hosted memo hub
+Une solution de prise de notes open-source et auto-hébergée, conçue pour un déploiement transparent et un accès multiplateforme. L'écriture de texte brut se fait sans effort avec pain-free, complété par une prise en charge robuste de la syntaxe Markdown pour une mise en forme améliorée.
