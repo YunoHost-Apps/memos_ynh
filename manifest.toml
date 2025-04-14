@@ -5,7 +5,7 @@ name = "Memos"
 description.en = "Lightweight, self-hosted memo hub"
 description.fr = "Hub de mémo léger et auto-hébergé"
 
-version = "0.22.2~ynh1"
+version = "0.24.2~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -17,7 +17,8 @@ admindoc = "https://usememos.com/docs"
 code = "https://github.com/usememos/memos"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 12.0.9"
+helpers_version = "2.1"
 architectures = ["amd64", "arm64"]
 multi_instance = true
 
@@ -42,10 +43,10 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        amd64.url = "https://github.com/usememos/memos/releases/download/v0.22.2/memos_v0.22.2_linux_amd64.tar.gz"
-        amd64.sha256 = "e029a158bdcc20a959abd3ef6904166aed87be0afc1583677921fb39d7c38d79"
-        arm64.url = "https://github.com/usememos/memos/releases/download/v0.22.2/memos_v0.22.2_linux_arm64.tar.gz"
-        arm64.sha256 = "f707512298bf9457dfae6c2f2888b78ba74c740ae10f1cf67de05dbbb546588c"
+        amd64.url = "https://github.com/usememos/memos/releases/download/v0.24.2/memos_v0.24.2_linux_amd64.tar.gz"
+        amd64.sha256 = "5185eabc36b0664b43bc4e7f5da4ff1104c3b08fd35f20bf78f032900333f7d1"
+        arm64.url = "https://github.com/usememos/memos/releases/download/v0.24.2/memos_v0.24.2_linux_arm64.tar.gz"
+        arm64.sha256 = "0ca82cd6fc76dfd40b1a7c5c78f01cb9ab83749cf5089016ac2019314caada0d"
 
         in_subdir = false
         autoupdate.strategy = "latest_github_tag"
@@ -66,4 +67,7 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = "sqlite3"
+    packages = "postgresql"
+
+    [resources.database]
+    type = "postgresql"
