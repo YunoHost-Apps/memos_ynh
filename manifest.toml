@@ -2,8 +2,8 @@ packaging_format = 2
 
 id = "memos"
 name = "Memos"
-description.en = "Lightweight, self-hosted memo hub"
-description.fr = "Hub de mémo léger et auto-hébergé"
+description.en = "Lightweight note-taking solution"
+description.fr = "Solution légère de prise de notes"
 
 version = "0.24.2~ynh1"
 

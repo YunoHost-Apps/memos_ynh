@@ -1,5 +1,5 @@
 [Unit]
-Description=Memos
+Description=Memos: Lightweight note-taking
 After=network.target
 
 [Service]

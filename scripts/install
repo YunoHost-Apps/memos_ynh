@@ -21,7 +21,7 @@ ynh_config_add_nginx
 
 ynh_config_add_systemd
 
-yunohost service add $app --description="Self-hosted memo hub" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Lightweight note-taking" --log="/var/log/$app/$app.log"
 
 #=================================================
 # APP INITIAL CONFIGURATION
