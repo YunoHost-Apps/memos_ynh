@@ -50,6 +50,8 @@ ram.runtime = "50M"
 
         in_subdir = false
         autoupdate.strategy = "latest_github_tag"
+        autoupdate.asset.amd64 = ".*_linux_amd64.tar.gz"
+        autoupdate.asset.arm64 = ".*_linux_arm64.tar.gz"
 
     [resources.system_user]
 
