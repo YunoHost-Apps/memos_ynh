@@ -5,7 +5,7 @@ name = "Memos"
 description.en = "Lightweight note-taking solution"
 description.fr = "Solution légère de prise de notes"
 
-version = "0.25.0~ynh1"
+version = "0.25.1~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -42,10 +42,10 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        amd64.url = "https://github.com/usememos/memos/releases/download/v0.25.0/memos_v0.25.0_linux_amd64.tar.gz"
-        amd64.sha256 = "deaee6445faccbfa4c5d4891b177088755d39fabf02037c7fd8e759a2472cd39"
-        arm64.url = "https://github.com/usememos/memos/releases/download/v0.25.0/memos_v0.25.0_linux_arm64.tar.gz"
-        arm64.sha256 = "5024ad74f4eedebff5f90251b5610d496e4d286d84d7ec8a0f50f026256190fb"
+        amd64.url = "https://github.com/usememos/memos/releases/download/v0.25.1/memos_v0.25.1_linux_amd64.tar.gz"
+        amd64.sha256 = "7dedf1139179d4f9526ea3c82f296b2c9ca5d0822fe29e362ece28816e5be284"
+        arm64.url = "https://github.com/usememos/memos/releases/download/v0.25.1/memos_v0.25.1_linux_arm64.tar.gz"
+        arm64.sha256 = "6f9897cef083de3d2f4472f3ad9a3d8dd37e342d3a6b638247d1b3946f963955"
 
         in_subdir = false
         autoupdate.strategy = "latest_github_release"
