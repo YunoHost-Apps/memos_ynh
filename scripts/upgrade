@@ -34,7 +34,7 @@ yunohost service add $app --description="Lightweight note-taking" --log="/var/lo
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service=$app --action="start" --wait_until="Server running on 127.0.0.1"
+ynh_systemctl --service=$app --action="start" --wait_until="Server running on 127.0.0.1" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT
