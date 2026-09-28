@@ -40,7 +40,7 @@ yunohost service add $app --description="Lightweight note-taking" --log="/var/lo
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl --service=$app --action="start"
+ynh_systemctl --service=$app --action="start" --wait_until="Server running on 127.0.0.1"
 
 ynh_systemctl --service=nginx --action=reload
 
